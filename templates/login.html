@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-1-4"><img height=266 width=400 style="margin-left: -310px; margin-top: 30px;"
+         src="{{url_for('static', filename='img/regist.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></div>
+      <div class="col-1-2"><img height=339 width=400 style="align: center; margin-left:0px"
+         src="{{url_for('static', filename='img/basa-+.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></div>
+      <div class="col-1-4"><img height=266 width=400 style="margin-top: 30px; margin-left: 150px; align: right"
+         src="{{url_for('static', filename='img/regist2.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></div>
+    </div>
+    <div class="row">
+      <div class="col-1-4"><img height=266 width=400 style="margin-left: -310px; margin-top: 60px;"
+         src="{{url_for('static', filename='img/regist1.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></div>
+      <div class="col-1-2"><h1 align="center" style="margin-top: 10px; margin-left: 0px">Авторизация педагогов</h1>
+        <form action="" method="post" class="login_form">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-control", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-control", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        <div>{{ message }}</div>
+        </form>
+      </div>
+      <div class="col-1-4"><img height=266 width=400 style="margin-top: 60px; margin-left: 150px; align: right"
+         src="{{url_for('static', filename='img/regist3.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

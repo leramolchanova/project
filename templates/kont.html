@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="font-size:300%;" align="center"><b>Контакты и местонахождение</b></h1>
+<div class="kont">
+    <h2>Запись по телефону: +7 (917) 868-93-31</h2>
+    <h2>Наша группа в Вк: <a style="color:black" href="https://vk.com/newpokolenielm">СТУДИЯ ТАЛАНТОВ "НОВОЕ ПОКОЛЕНИЕ"</a></h2>
+    <h2>Чат в Telegram: <a style="color:black" href="https://t.me/talantstudio">Студия талантов "Новое Поколение"</a></h2>
+</div>
+<div class="kont">
+    <h2>Мы находимя по адресу Молодёжная 7, город Елабуга.</h2>
+</div>
+<img class='ph' height="555" width="1125" src="{{url_for('static', filename='img/karta.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+{% endblock %}

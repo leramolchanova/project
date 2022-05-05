@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p style="font-size:300%;" align="center"><b>Направления</b></p>
+<table style="margin-top:25px;">
+    <tr>
+        <th><p style="font-size:280%" align="center">Вокал</p>
+        <h1 style="font-size: 35px;">Вокал является искусством потому,</h1>
+        <h1 style="font-size: 35px;">что певец должен не только точно </h1>
+        <h1 style="font-size: 35px;">повторить мелодию, написанную</h1>
+        <h1 style="font-size: 35px;">композитором, но и при помощи</h1>
+        <h1 style="font-size: 35px;">голоса передать все её оттенки,</h1>
+        <h1 style="font-size: 35px;">характер и настроение.</h1>
+        <h1 style="font-size: 35px;">На уроках вокала в нашей студии вы овладеете:</h1>
+        <h1 style="font-size: 35px;">•правильным дыханием</h1>
+        <h1 style="font-size: 35px;">•хорошей артикуляцией</h1>
+        <h1 style="font-size: 35px;">•пониманием о резонаторах</h1>
+        <h1 style="font-size: 35px;">•вокальными приемами</h1>
+        </th>
+        <th><img height=740 width=460 style="margin-left: 50px"
+         src="{{url_for('static', filename='img/vocal.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></th>
+    </tr>
+ </table>
+<table width="100%" style="margin-top:60px;">
+    <tr>
+        <th><p style="font-size:280%" align="center">Хореография</p>
+        <h1 style="font-size: 35px;">Ни для кого не секрет, что вокалист</h1>
+        <h1 style="font-size: 35px;">должен в равной мере владеть</h1>
+        <h1 style="font-size: 35px;">своим голосом и своим телом,</h1>
+        <h1 style="font-size: 35px;">ведь выход на сцену артиста всегда</h1>
+        <h1 style="font-size: 35px;">сопряжен с опасностью потери</h1>
+        <h1 style="font-size: 35px;">власти над своим телом.</h1>
+        <h1 style="font-size: 35px;">На занятиях по хореографии вы научитесь:</h1>
+        <h1 style="font-size: 35px;">•свободно двигаться на сцене</h1>
+        <h1 style="font-size: 35px;">•подчёркивать движениями акценты в песне</h1>
+        <h1 style="font-size: 35px;">•выражать свои эмоции с помощью танца</h1>
+        </th>
+        <th><img height=530 width=460 style="margin-left: 50px; margin-top:20px"
+         src="{{url_for('static', filename='img/hor.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></th>
+    </tr>
+ </table>
+<table width="100%" style="margin-top:60px;">
+    <tr>
+        <th><p style="font-size:280%" align="center">Актёрское мастерство</p>
+        <h1 style="font-size: 35px;">Артист должен уметь сделать так,</h1>
+        <h1 style="font-size: 35px;">чтобы исполняя песню, он убедил</h1>
+        <h1 style="font-size: 35px;">зрителя в том, что вышел на </h1>
+        <h1 style="font-size: 35px;">откровенный разговор. Такое</h1>
+        <h1 style="font-size: 35px;">исполнение достигается изучением</h1>
+        <h1 style="font-size: 35px;">и постоянным оттачиванием</h1>
+        <h1 style="font-size: 35px;">навыков мастерства актёра.</h1>
+        <h1 style="font-size: 35px;">С помощью занятий актерским мастерством вы:</h1>
+        <h1 style="font-size: 35px;">•сможете уверенно чувствовать себя на сцене</h1>
+        <h1 style="font-size: 35px;">•научитесь эмоционально проживать свои песни и вызывать разнообразные чувства у зрителей</h1>
+        </th>
+        <th><img height=510 width=460 style="margin-left: 50px; margin-top:20px"
+         src="{{url_for('static', filename='img/akt.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></th>
+    </tr>
+ </table>
+{% endblock %}

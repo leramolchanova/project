@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if voz > 21 %}
+{% if p == 'female' %}
+{% set cl='#FF3333' %}
+{% else %}
+{% set cl='#9933FF' %}
+{% endif %}
+{% else %}
+{% if p == 'female' %}
+{% set cl='#FF6699' %}
+{% else %}
+{% set cl='#CCFFFF' %}
+{% endif %}
+{% endif %}
+<table>
+    <table border="1" bordercolor="grey" width=642px>
+<tr bgcolor="grey">
+    <td align="center">Цвет стен</td>
+    <td align="center">Эмблема</td>
+</tr> <!--ряд с ячейками заголовков-->
+<tr><td height=450 width="310" bgcolor={{cl}}></td>
+    {% if voz > 21 %}
+    <td height=450><img height=450 width=321 src="{{url_for('static', filename='img/vz.png')}}"
+           alt="здесь должна была быть картинка, но не нашлась"></td>
+    {% else %}
+    <td height=450><img height=450 width=321 src="{{url_for('static', filename='img/r.jpg')}}"
+           alt="здесь должна была быть картинка, но не нашлась"></td>
+    {% endif %}
+</tr> <!--ряд с ячейками тела таблицы-->
+</table>
+{% endblock %}

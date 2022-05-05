@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="gl">
+    <tr>
+        <td width=80% style="font-size: 220%">
+            <p style="font-size: 230%">Студия талантов</p>
+            <p style="font-size: 230%">❝Новое поколение❞</p>
+            <p>――――――――――――――――――――――</p>
+            <p>музыкальное пространство, в котором</p>
+            <p>каждый сможет найти и раскрыть</p>
+            <p>свой творческий потенциал!</p></td>
+
+        <td colspan="3"><img src="{{url_for('static', filename='img/st1.jpg')}}"
+                     alt="здесь должна была быть картинка, но не нашлась"></td>
+    </tr>
+</table>
+<table class="ta">
+    <tr>
+        <td width="450" style="font-size: 220%;">
+            <img height="180" width="180" class="phot" src="{{url_for('static', filename='img/obor.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+        <td width="450" style="font-size: 220%">
+            <img height="180" width="180" class="phot" src="{{url_for('static', filename='img/scena.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+        <td width="450" style="font-size: 220%">
+            <img height="180" width="180" class="phot" src="{{url_for('static', filename='img/micro.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+    </tr>
+    <tr>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 110%; text-align: center;">Современное оборудование</h2>
+            <div>
+            <h4 style="text-align: center;">Одна из наиболее технически обустроенных студий в Елабуге.
+                Во время уроков вокалисты обеспечены качественным
+                микрофонами, стойками и обработкой голоса. </h4>
+                </div>
+        </td>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 110%; text-align: center;">Практика выступлений</h2>
+            <div>
+            <h4 style="text-align: center;">Наши ученики регулярно принимают участие в муниципальных мероприятиях
+                и отчётных концертах студии, становятся лауреатами республиканских и международных конкурсов.</h4>
+                </div>
+        </td>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 100%; text-align: center;">Звукозапись и съёмка</h2>
+            <div>
+            <h4 style="text-align: center;">Возможность записи песни в профессиональной студии звукозаписи под руководством
+                педагога по вокала и съёмок клипов к песням.</h4>
+                </div>
+        </td>
+    </tr>
+    <tr>
+        <td width="450" style="font-size: 220%">
+            <img height="180" width="180" class="phot" style="margin-top: 100px" src="{{url_for('static', filename='img/kalend.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+        <td width="450" style="font-size: 220%">
+            <img height="170" width="220" class="phot" style="margin-top: 100px" src="{{url_for('static', filename='img/peop.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+        <td width="450" style="font-size: 220%">
+            <img height="170" width="180" class="phot" style="margin-top: 100px" src="{{url_for('static', filename='img/level.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+        </td>
+    </tr>
+    <tr>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 100%; text-align: center;">Индивидуальное расписание</h2>
+            <div>
+            <h4 style="text-align: center;">Составляем график посещений в удобное для Вас время.
+            Педагог всегда поможет перенести занятие или изменить расписание.</h4>
+                </div>
+        </td>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 110%; text-align: center;">Занятия без возрастных ограничений</h2>
+            <div>
+            <h4 style="text-align: center;">В нашей студии проводятся занятия как для детей, так и для взрослых.</h4>
+                </div>
+        </td>
+        <td width="450" style="font-size: 220%">
+        <h2 style="font-size: 110%; text-align: center;">Разные уровни</h2>
+            <div>
+            <h4 style="text-align: center;">Наши педагоги работают и с новичками, и с опытными вокалистами.</h4>
+                </div>
+        </td>
+    </tr>
+</table>
+{% endblock %}

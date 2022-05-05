@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}" />
+    <title>Новое поколение</title>
+    <style>
+   .ot {margin-left: 80px;}
+   .dos {margin-top: 20px;
+   margin-left: -150px}
+   .gl {margin-left: -300px;
+   margin-top: 100px}
+   .layer2 {
+    margin-left: 80px; /* Отступ слева */
+    background-color: #CCFFFF; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto;
+   }
+   body{
+    background-color: #CCFFFF; /* Цвет фона веб-страницы */
+   }
+  </style>
+</head>
+<body>
+<header>
+    <table class="layer2">
+        <tr align="center">
+            <th>
+                <img height=45 width=45 src="{{url_for('static', filename='img/glav1.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+            </th>
+            <th>
+                <h3><a style="color:black" href="/">Главная</a></h3>
+            </th>
+            <th>
+                <img class="ot" align='left' height=47 width=47 src="{{url_for('static', filename='img/muz1.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+            </th>
+            <th>
+                <h3><a style="color:black" href="/napr">Направления</a></h3>
+            </th>
+            <th>
+                <img class="ot" height=45 width=45 src="{{url_for('static', filename='img/pe.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+            </th>
+            <th>
+                <h3><a style="color:black" href="/ped">Наши педагоги</a></h3>
+            </th>
+            <th>
+                <img class="ot" height=45 width=45 src="{{url_for('static', filename='img/dost.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+            </th>
+            <th>
+                <h3><a style="color:black" href="/dost">Наши достижения</a></h3>
+            </th>
+            <th>
+                <img class="ot" height=42 width=42 src="{{url_for('static', filename='img/kont1.png')}}"
+                     alt="здесь должна была быть картинка, но не нашлась">
+            </th>
+            <th>
+                <h3><a style="color:black" href="/kont">Контакты</a></h3>
+            </th>
+        </tr>
+    </table>
+</header>
+<!-- Begin page content -->
+<main role="main" class="container">
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>

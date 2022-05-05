@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table align="left" class="dos">
+    <tr>{% if current_user.is_authenticated %}
+    <h3 style="margin-left: -150px; margin-top: 0px">
+        <a style="color:black" href="/edit_prof">{{current_user.name}} {{current_user.surname}}</a></h3>
+        {% endif %}
+    </tr>
+    <tr>
+    <td>
+        <div>
+            {% if current_user.is_authenticated %}
+            <a class="btn btn-primary" href="/new_dost" style="margin-top:-30px">Добавить новость</a>
+            <a class="btn btn-primary" href="/logout" style="margin-top:-30px">Выйти</a>
+            {% else %}
+            <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
+            <a class="btn btn-primary" href="/login">Войти</a>
+            {% endif %}
+        </div>
+    </td>
+    </tr>
+</table>
+<p style="font-size:300%;" align="center"><b>Наши достижения</b></p>
+{% for item in dosts%}
+<div class="col-md6 border rounded" style="margin-left: 200px">
+    <h2>{{item.title}}</h2>
+    <div>
+        <h3>{{item.content}}</h3>
+    </div>
+    <div>
+        Автор - {{item.user.name}} {{item.user.surname}}, Дата написания - {{item.created_date}}
+    </div>
+    <img class="ot" width="20%" src="/static/img/photo{{item.id}}.jpg"
+                     alt="здесь должна была быть картинка, но не нашлась">
+    {% if (current_user.is_authenticated and current_user == item.user) or
+    (current_user.is_authenticated and current_user.id == 1)%}
+    <div>
+        <a href="/dosts/{{ item.id }}" class="btn btn-warning">
+            Изменить
+        </a>
+        <a href="/dosts_delete/{{ item.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+    </div>
+{% endif %}
+</div>
+{% endfor %}
+{% endblock %}
