@@ -1,0 +1,1 @@
+C:\Users\Valeriya\PycharmProjects\git_project1
